@@ -1,0 +1,58 @@
+/* src/Style/ManagePayments.css */
+.manage-payments-container {
+  padding: 20px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.manage-payments-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.payment-table th,
+.payment-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.payment-table th {
+  background-color: #f0f0f0;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.status.paid {
+  background-color: #16a34a;
+  color: white;
+}
+
+.status.pending {
+  background-color: #facc15;
+  color: #000;
+}
+
+.status.not-paid {
+  background-color: #dc2626;
+  color: white;
+}

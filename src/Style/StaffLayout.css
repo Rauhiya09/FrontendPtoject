@@ -1,0 +1,19 @@
+
+/* src/Style/StaffLayout.css */
+.staff-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.staff-body {
+  display: flex;
+  flex: 1;
+}
+
+.staff-content {
+  flex: 1;
+  padding: 1rem;
+  background-color: #f3f4f6; 
+  overflow-y: auto;
+}

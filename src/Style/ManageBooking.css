@@ -1,0 +1,60 @@
+/* src/Style/ManageBooking.css */
+.manage-booking-container {
+  padding: 20px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.manage-booking-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.booking-table th,
+.booking-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.booking-table th {
+  background-color: #f0f0f0;
+}
+
+.confirm-btn {
+  background-color: #16a34a;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.deny-btn {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.status {
+  font-weight: bold;
+  text-transform: capitalize;
+}
