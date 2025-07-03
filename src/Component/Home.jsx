@@ -5,27 +5,27 @@ import '../Style/Home.css';
 const Home = () => {
   const buildings = [
   {
-    buildId: 'B001',
-    buildcode: 'KIJANGWANI',
-    buildname: 'Kijangwani Plaza',
+    buildId: 'A001',
+    buildcode: 'A001',
+    buildname: 'KIJANGWANI',
     description: 'Mna maduka 300',
     location: 'Kariakoo',
-    status: 'Maduka yapo',
+    status: 'Available',
     image: '/Images/kijangwani.png'
   },
   {
-    buildId: 'B002',
-    buildcode: 'TRAIN',
-    buildname: 'Jumba La Train',
+     buildId: 'A002',
+    buildcode: 'A002',
+    buildname: 'JUMBA LA TRAIN',
     description: 'Jengo kubwa la biashara lenye maduka mengi',
-    location: 'Mwananyamala',
+    location: 'Darajani',
     status: 'Maduka yamekamilika',
     image: '/Images/train.png'
   },
   {
-    buildId: 'B003',
-    buildcode: 'MICHENZANI',
-    buildname: 'Michenzani Mall',
+    buildId: 'A003',
+    buildcode: 'A003',
+    buildname: 'MICHENZANI MALL',
     description: 'Maduka ya kisasa ya biashara',
     location: 'Michenzani',
     status: 'Yapo kwa matumizi',
@@ -34,19 +34,35 @@ const Home = () => {
 ];
 return (
     <div className="home-container">
-      {/* Search Section */}
-      <section className="search-hero">
-        <h1 className="search-heading">OUR STORES</h1>
-        <div className="search-input-container">
-          <input 
-            type="text" 
-            placeholder="Enter location, building name" 
-            className="search-input"
-          />
-          <button className="search-button">Search</button>
-        </div>
-      </section>
-
+      <section className="search-bar">
+  <div className="search-filters">
+    <div className="filter">
+      <label>Region</label>
+      <select>
+        <option>Unguja</option>
+        <option>Pemba</option>
+        <option>Dar-es-salam</option>
+      </select>
+    </div>
+    <div className="filter">
+      <label>Location</label>
+      <input type="text" placeholder="Enter Area" />
+    </div>
+    <div className="filter">
+      <label>Building</label>
+      <select>
+        <option>All Buildings</option>
+        <option>Michenzani</option>
+        <option>Kijangwani</option>
+        <option>Jumba La Train</option>
+        <option>Thabit Kombo</option>
+        <option>Mwana kwerekwe</option>
+      </select>
+    </div>
+    
+    <button className="search-btn">Search</button>
+  </div>
+</section>
       {/* Properties Section */}
       <section className="properties-section">
         <h2>BUILDINGS</h2>
@@ -88,7 +104,7 @@ return (
       {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
-          <p>&copy; {new Date().getFullYear()} Real Estate Management System. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()}  Real Estate Management System. All rights reserved.</p>
         </div>
       </footer>
     </div>

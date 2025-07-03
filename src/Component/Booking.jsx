@@ -36,14 +36,7 @@ function Booking() {
             onChange={handleChange}
             required
           />
-          <input
-            type="text"
-            name="size_of_space"
-            placeholder="Size of Space"
-            value={formData.size_of_space}
-            onChange={handleChange}
-            required
-          />
+          
           <input
             type="text"
             name="type_of_business"

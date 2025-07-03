@@ -1,33 +1,44 @@
-/* Header Styles */
+/* Whole header container */
 .app-header {
-  background-color: #ffffff;
-  padding: 0.5rem 2rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar {
+/* Top header: logo + name centered */
+.top-header {
+  background-color: #008080;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-/* Left section: logo + system name */
-.left-section {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  justify-content: center;  /* center logo + text */
+  gap: 0.75rem;  /* space between logo and text */
+  padding: 0.5rem 2rem;
 }
 
 .logo-image {
-  width: 40px;
-  height: 40px;
+  width: 50px;       /* kubwa kidogo */
+  height: 50px;
   object-fit: contain;
 }
 
-/* Center section: nav links */
+.system-name {
+  color: #ffffff;
+  font-size: 1.4rem;    /* slightly bigger text */
+  font-weight: 600;
+}
+
+
+/* Bottom header: navigation */
+.bottom-header {
+  background-color: #006666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 2rem;
+}
+
+/* Navigation links */
 .center-section {
   display: flex;
   gap: 1.5rem;
@@ -35,16 +46,16 @@
 
 .nav-link {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
   font-size: 1rem;
 }
 
 .nav-link:hover {
-  color: #0066cc;
+  color: #ffcc00;
 }
 
-/* Right section: button */
+/* Right section: Sign In button */
 .right-section {
   display: flex;
   align-items: center;
@@ -53,9 +64,9 @@
 .signout-button {
   background-color: #0066cc;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
 }
 

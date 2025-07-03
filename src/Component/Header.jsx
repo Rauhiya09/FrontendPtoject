@@ -1,23 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../Style/Header.css';
 
 const Header = () => {
   return (
     <header className="app-header">
-      <nav className="navbar">
-        <div className="left-section">
-          <img src="/Images/logo.png" alt="Logo" className="logo-image" />
-          <span className="system-name">Real Estate</span>
-        </div>
+      {/* Top header: logo and system name */}
+      <div className="top-header">
+        <img src="/Images/logo.png" alt="Logo" className="logo-image" />
+        <span className="system-name">Real Estate Management System</span>
+      </div>
 
+      {/* Bottom header: navigation */}
+      <nav className="bottom-header">
         <div className="center-section">
-          <a href="/" className="nav-link">Home</a>
-          <a href="/property" className="nav-link">Property</a>
-          <a href="/about" className="nav-link">About Us</a>
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/property" className="nav-link">Property</Link>
+          <Link to="/about" className="nav-link">About Us</Link>
         </div>
-
         <div className="right-section">
-          <button className="signout-button">Sign In</button>
+          <Link to="/register">
+            <button className="signout-button">Sign In</button>
+          </Link>
         </div>
       </nav>
     </header>

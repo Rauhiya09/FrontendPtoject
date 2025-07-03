@@ -9,18 +9,21 @@ import PropertyDetails from './Component/PropertyDetails';
 import ManageCustomers from './Component/ManageCustomers'; 
 import ManageBooking from './Component/ManageBooking'; 
 import ManagePayments from './Component/ManagePayments';
+import AboutUs from './Component/AboutUs';
 
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="register" element={<LoginRegister />} />
         {/* Main website layout */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="booking" element={<Booking />} />
-          <Route path="register" element={<LoginRegister />} />
           <Route path="property" element={<PropertyDetails />} />
+          <Route path="building/:buildId" element={<PropertyDetails />} />
+          <Route path="about" element={<AboutUs />} />
         </Route>
 
         {/* Staff layout routes */}

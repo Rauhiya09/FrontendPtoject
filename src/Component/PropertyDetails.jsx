@@ -1,22 +1,23 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import "../Style/PropertyDetails.css";
 
 const properties = [
   {
     id: 1,
     image: "/images/property1.jpg",
-    propertyCode: "P001",
+    propertyCode: "A001",
     size: "120 sqm",
-    pricePerMonth: "$800",
+    pricePerMonth: "$500",
     wings: "A",
     floor: "1st",
   },
   {
     id: 2,
     image: "/images/property2.jpg",
-    propertyCode: "P002",
+    propertyCode: "A002",
     size: "95 sqm",
-    pricePerMonth: "$700",
+    pricePerMonth: "$600",
     wings: "B",
     floor: "2nd",
   },
@@ -25,72 +26,26 @@ const properties = [
     image: "/images/property3.jpg",
     propertyCode: "P003",
     size: "130 sqm",
-    pricePerMonth: "$850",
-    wings: "A",
-    floor: "3rd",
-  },
-  {
-    id: 4,
-    image: "/images/property4.jpg",
-    propertyCode: "P004",
-    size: "110 sqm",
-    pricePerMonth: "$750",
-    wings: "C",
-    floor: "1st",
-  },
-  {
-    id: 5,
-    image: "/images/property5.jpg",
-    propertyCode: "P005",
-    size: "140 sqm",
-    pricePerMonth: "$900",
-    wings: "B",
-    floor: "2nd",
-  },
-  {
-    id: 6,
-    image: "/images/property6.jpg",
-    propertyCode: "P006",
-    size: "100 sqm",
     pricePerMonth: "$720",
     wings: "A",
     floor: "3rd",
   },
-  {
-    id: 7,
-    image: "/images/property7.jpg",
-    propertyCode: "P007",
-    size: "125 sqm",
-    pricePerMonth: "$810",
-    wings: "C",
-    floor: "2nd",
-  },
-  {
-    id: 8,
-    image: "/images/property8.jpg",
-    propertyCode: "P008",
-    size: "135 sqm",
-    pricePerMonth: "$880",
-    wings: "B",
-    floor: "1st",
-  },
-  {
-    id: 9,
-    image: "/images/property9.jpg",
-    propertyCode: "P009",
-    size: "115 sqm",
-    pricePerMonth: "$770",
-    wings: "A",
-    floor: "2nd",
-  },
+  // ... add other properties
 ];
 
 const PropertyDetails = () => {
+  const { buildId } = useParams(); // capture building ID from URL
+
+  // Filter properties by building code
+  const filteredProperties = buildId
+    ? properties.filter((prop) => prop.propertyCode === buildId)
+    : properties;
+
   return (
     <div className="page-container">
       <header className="page-header">Property Details</header>
       <div className="property-grid">
-        {properties.map((property) => (
+        {filteredProperties.map((property) => (
           <div className="property-card" key={property.id}>
             <img src={property.image} alt={property.propertyCode} />
             <div className="property-info">
@@ -103,6 +58,9 @@ const PropertyDetails = () => {
             </div>
           </div>
         ))}
+        {filteredProperties.length === 0 && (
+          <p style={{ padding: "1rem" }}>No properties found for this building.</p>
+        )}
       </div>
     </div>
   );

@@ -37,7 +37,7 @@ function LoginRegister() {
     <div className="login-container">
       <div className="login-box">
         <img src="/Images/logo.png" alt="Company Logo" className="logo" />
-        <h2>GIS Real Estate System</h2>
+        <h2>Real Estate Management System</h2>
 
         <form onSubmit={handleSubmit}>
           {isRegistering && (
